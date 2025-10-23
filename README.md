@@ -195,7 +195,7 @@ And we can write equations 2.10 excluding the last term from 2.11
 
 <br /><img width="582" height="72" alt="image" src="https://github.com/user-attachments/assets/d67c8bb8-0f10-44f9-8538-9f43ebecba54" />  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2.11)
 
-Considering equations 2.10 and 2.11 results in the following form of the gradient determinant (2.15 and 2.16).  The form of the gradient matrix is identical to the form of the weighted matrix
+Considering equations 2.10 and 2.11 results in the following form of the gradient determinant (2.12 and 2.13).  The form of the gradient matrix is identical to the form of the weighted matrix
 
 <br /><img width="162" height="181" alt="image" src="https://github.com/user-attachments/assets/3dea45fc-71f6-49d5-89a7-57a6086ec8c7" />
 

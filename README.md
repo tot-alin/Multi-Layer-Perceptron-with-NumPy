@@ -155,7 +155,7 @@ Considering equations 2.5, 2.6, 2.7, 2.8 and 2.9, equations 2.3 and 2.4 can be w
 
 Index T is the transposed matrix for realizing the junctions between layers. If for forward propagation, the matrix w L realizes the junction between the shape of the input matrices in the L-layer and the output shape, for back propagation the reverse effect must be realized.This is done by rotating the matrix from the bottom left corner to the top right corner.
 
-<br /><img width="211" height="41" alt="image" src="https://github.com/user-attachments/assets/38aa5287-4ee9-447a-bef7-755319c43d29" />  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2.10)
+<br /><img width="211" height="41" alt="image" src="https://github.com/user-attachments/assets/38aa5287-4ee9-447a-bef7-755319c43d29" />
 
 <br /><img width="310" height="41" alt="image" src="https://github.com/user-attachments/assets/672b07fd-60a0-45d2-90db-6c7078f4ae63" />
 
@@ -165,9 +165,68 @@ Index T is the transposed matrix for realizing the junctions between layers. If 
 
 <br /><img width="192" height="41" alt="image" src="https://github.com/user-attachments/assets/7896ebe5-fb15-4e3f-931f-15430b62c139" />
 
+<br /><img width="290" height="41" alt="image" src="https://github.com/user-attachments/assets/f6490c08-8415-4081-a6b3-ffb4a5182e55" />
+
+<br /><img width="388" height="41" alt="image" src="https://github.com/user-attachments/assets/0ee24199-d899-4c9f-a6ff-df1f7c4449e3" />
+
+<br /><img width="379" height="41" alt="image" src="https://github.com/user-attachments/assets/b72e9371-4583-4f75-93b1-63dadb4f00c8" />
+
+<br /><img width="335" height="23" alt="image" src="https://github.com/user-attachments/assets/940a1a30-d746-4c24-911a-b10417e0f6b6" />  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2.10)
+
+To simplify the implementation process, we consider
+* for the last layer <img width="220" height="44" alt="image" src="https://github.com/user-attachments/assets/53ddc60f-83f6-46c0-884d-b95a87e0fef9" />
+* for the rest of the layers <img width="242" height="44" alt="image" src="https://github.com/user-attachments/assets/089d251e-4357-45d4-997f-a2c40adc9e75" />
+
+And we can write equations 2.10 excluding the last term from 2.11
+
+<br /><img width="150" height="25" alt="image" src="https://github.com/user-attachments/assets/3829eec3-0b9f-4625-a196-ee2587135f77" />
+
+<br /><img width="569" height="72" alt="image" src="https://github.com/user-attachments/assets/244e0dcb-03b5-47bf-a3f3-eb5342f10337" />
+
+<br /><img width="141" height="23" alt="image" src="https://github.com/user-attachments/assets/3aa5619b-a853-4de9-a964-3e263804e34a" />
+
+<br /><img width="579" height="72" alt="image" src="https://github.com/user-attachments/assets/298b3581-9181-4cd7-b842-88447f1af487" />
+
+<br /><img width="140" height="23" alt="image" src="https://github.com/user-attachments/assets/73c0d4a1-42b9-4f88-81c0-132b0e37e1b7" />
+
+<br /><img width="570" height="72" alt="image" src="https://github.com/user-attachments/assets/ca23ef8d-856d-4019-ac07-e575bffdb6b7" />
+
+<br /><img width="139" height="23" alt="image" src="https://github.com/user-attachments/assets/f9324153-e5f5-459c-9725-a6e0d85ad973" />
+
+<br /><img width="582" height="72" alt="image" src="https://github.com/user-attachments/assets/d67c8bb8-0f10-44f9-8538-9f43ebecba54" />  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2.11)
+
+Considering equations 2.10 and 2.11 results in the following form of the gradient determinant (2.15 and 2.16).  The form of the gradient matrix is identical to the form of the weighted matrix
+
+<br /><img width="162" height="181" alt="image" src="https://github.com/user-attachments/assets/3dea45fc-71f6-49d5-89a7-57a6086ec8c7" />
+
+<br /><img width="296" height="68" alt="image" src="https://github.com/user-attachments/assets/26491bc0-6142-443a-aa33-d254d238b755" />
+
+<br /><img width="295" height="68" alt="image" src="https://github.com/user-attachments/assets/91dc4678-fa50-46e6-834a-99b7eeda6ee0" />
+
+<br /><img width="308" height="68" alt="image" src="https://github.com/user-attachments/assets/337c5fa6-e4e9-463f-a169-c8647c8988c0" />
+
+<br /><img width="349" height="68" alt="image" src="https://github.com/user-attachments/assets/12009a4e-46f9-4a0f-8a2d-615f05d17b6a" />   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2.12)
+
+As it follows from equations 2.10, the gradients of b L are equal to δ L and the composition of the gradients resulting from each input feature (100 in this case) is realized by summing over the vertical
+
+<br /><img width="118" height="181" alt="image" src="https://github.com/user-attachments/assets/f80ec163-cbdf-4f1b-b0a8-9511afefabe5" />
+
+<br /><img width="244" height="72" alt="image" src="https://github.com/user-attachments/assets/a1b12d5f-08c7-44d5-ae96-655f420c4d95" />
+
+<br /><img width="237" height="72" alt="image" src="https://github.com/user-attachments/assets/68ef6615-6caf-47cf-a28c-0294532020da" />
+
+<br /><img width="230" height="72" alt="image" src="https://github.com/user-attachments/assets/57388d8c-5f6f-4199-b591-13e8ce842541" />
+
+<br /><img width="237" height="72" alt="image" src="https://github.com/user-attachments/assets/a89bc371-5cda-4cdb-9b55-86b87e1e3b60" />  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2.13)
+
 <br />
 <br />
 <br />
+<br />
+<br />
+<br />
+<br />
+
 
 <br />
 <br />

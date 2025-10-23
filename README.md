@@ -36,6 +36,28 @@ The data pre-processing is performed as follows:
 <br />
 
 ## Feedforward
+Feedforward, the neural network's process of passing data from the input layer to the output layer. This process is carried out by each perceptron of the network, calculating the weighted sum of inputs 1.1a, and passed to the activation function 1.1b. Figure 1 illustrates the shape of a perceptron, where X1..p - represents the input, w1..P - the weighting for each input, b - bias (balancing value), S - the weighted sum 1.1a and A- the activation function
+<br />fig. 1
+<p align="center">
+<br /><img width="450" height="330" alt="Screenshot from 2025-10-23 11-14-51" src="https://github.com/user-attachments/assets/08715390-acfd-4297-8c93-3e58ca101a3d" />
+</p>
+<br /><img width="112" height="23" alt="image" src="https://github.com/user-attachments/assets/15a17722-d94d-4e87-b91e-599052d965e4" />  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1.1a)
+
+<br /><img width="107" height="41" alt="image" src="https://github.com/user-attachments/assets/41e433af-8eb0-44af-adaa-ffd6b7c6293c" />  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1.1b)
+
+<br />S - weighted sum, w - weighting, x - input values , f() - activation function , A - activation function result
+
+In accordance with the above equations, the heat relations and their matrix form for a neural network with 4 hidden layers are given below.  The data input, as shown in matrix 1.2, is a matrix 100 x 784 . The size of each line, is a 28X28 pixel image transformed into a vector of 784 . The number of lines is the number of features in the data packet that goes into the processing, 100 in this case.
+
+<br /><img width="233" height="68" alt="image" src="https://github.com/user-attachments/assets/5b87b6b0-01d7-4a94-a8de-b25427fb125d" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1.2)
+
+The initialization of the weight matrices is performed by generating a randomized matrix where the number of rows is the feature size and the number of columns is the number of perceptrons in that layer, i.e. the number of outputs. For example matrix 1.3, the matrix of weights on the first hidden layer has the number of rows equal to the size of the resulting vector from the 28X28pixel image i.e. 784. The number of columns, as can be seen in matrix 1.3, is the number of outputs to layer 2.
+
+<br /><img width="308" height="109" alt="image" src="https://github.com/user-attachments/assets/4898d59d-8742-4614-b2d0-c25db2dbe4a5" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1.3)
+
+Initializing the bias vector, it is a matrix with a single row and has the number of scalars eqal numbers layers. 
+
+Equation 1.4 relates the weighted sum of the input layer to which the bias vector is added. The shape of the SL1 matrix is 100x64, the shape resulting from multiplying the matrix X (100x784) by the matrix wL1 (784x64). For equations 1.6, 1.8 and 1.10, the approach is identical but the matrix X is replaced by the matrix resulting from the activation function in the previous layer, and the weighted matrix w is the matrix related to the respective layer.
 
 
 <br />

@@ -47,7 +47,7 @@ Feedforward, the neural network's process of passing data from the input layer t
 
 <br />S - weighted sum, w - weighting, x - input values , f() - activation function , A - activation function result
 
-In accordance with the above equations, the heat relations and their matrix form for a neural network with 4 hidden layers are given below.  The data input, as shown in matrix 1.2, is a matrix 100 x 784 . The size of each line, is a 28X28 pixel image transformed into a vector of 784 . The number of lines is the number of features in the data packet that goes into the processing, 100 in this case.
+In accordance with the above equations, the relations and their matrix form for a neural network with 4 hidden layers are given below.  The data input, as shown in matrix 1.2, is a matrix 100 x 784 . The size of each line, is a 28X28 pixel image transformed into a vector of 784 . The number of lines is the number of features in the data packet that goes into the processing, 100 in this case.
 
 <br /><img width="233" height="68" alt="image" src="https://github.com/user-attachments/assets/5b87b6b0-01d7-4a94-a8de-b25427fb125d" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1.2)
 

@@ -64,7 +64,7 @@ Equation 1.4 relates the weighted sum of the input layer to which the bias vecto
 <br /><img width="529" height="68" alt="image" src="https://github.com/user-attachments/assets/d2fa78c6-e2f5-49a0-8f4e-04cd85900a99" />
 <br />matrix form of eucation 1.4
 
-The activation functions expressed in Equations 1.5, 1.7 and 1.9 are the weighted sum matrix for each layer, to which the sigmoid function (in this case, Equation 1.2) is applied for the element in the matrix.
+The activation functions expressed in Equations 1.5, 1.7, 1.9 and 1.11 are the weighted sum matrix for each layer, to which the sigmoid function (in this case, Equation 1.2) is applied for the element in the matrix.
 
 <br /><img width="82" height="22" alt="image" src="https://github.com/user-attachments/assets/bbe24480-dd95-4b97-824e-59e1352b3a6b" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1.5)
 

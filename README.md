@@ -126,7 +126,7 @@ E –loss; A Ln – activation function for layer n; S Ln – weighted sum on la
 
 Similar to the determination of the gradients of the weights we determine the gradients for the bias, but replacing w L by b L. This is a vector that has the size of the number of perceptrons in the layer.
 
-<img width="912" height="386" alt="Screenshot from 2025-10-23 12-44-25" src="https://github.com/user-attachments/assets/1c028f11-a9a1-4a37-930f-88ad4253d80a" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2.4)
+<img width="450" height="190" alt="Screenshot from 2025-10-23 12-44-25" src="https://github.com/user-attachments/assets/1c028f11-a9a1-4a37-930f-88ad4253d80a" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2.4)
 
 b Ln – bias for layer n
 
@@ -139,11 +139,35 @@ Taking into account that the neural network has a repetitive form with respect t
 
 <img width="282" height="44" alt="image" src="https://github.com/user-attachments/assets/c48c7ae9-5ba6-4bb1-864b-e7f836e04955" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2.6) 
   
+* Equation 2.7 represents the change in the weighted sum of the upper layer  S L+1 as a function of the inputs assigned to it from the output of the lower layers A L . This is equal to the value of the weights in the upper layer w L+1. We consider b L+1 = 0, since we are interested in the modification of S L+1 as a function of A L .
 
+<img width="347" height="44" alt="image" src="https://github.com/user-attachments/assets/b2d8564c-58e4-4d69-8179-b971b38e0336" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2.7) 
 
+* The derivative of the weighted sum S L with respect to the weight w L, is equal to the result of the activation function in the previous layer A L-1 , except for the first layer because A L-1 becomes the input to the model, i.e. X. We consider b L = 0, since we are interested in the evolution of S L as a function of w L.
 
+<img width="320" height="44" alt="image" src="https://github.com/user-attachments/assets/41ce54a0-cb2d-4c7c-9645-2dfbc56289d2" />  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2.8)
 
+* The weighted sum S L with respect to b L, is equal to 1 because the inputs      A L-1 and the weights w are 0, because we are interested in the evolution of    S L as a function of b L.
 
+<img width="273" height="44" alt="image" src="https://github.com/user-attachments/assets/47dfec4d-36da-407a-a5d4-609b9ca6736c" />  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2.9)
+
+Considering equations 2.5, 2.6, 2.7, 2.8 and 2.9, equations 2.3 and 2.4 can be written as 2.10 below.
+
+Index T is the transposed matrix for realizing the junctions between layers. If for forward propagation, the matrix w L realizes the junction between the shape of the input matrices in the L-layer and the output shape, for back propagation the reverse effect must be realized.This is done by rotating the matrix from the bottom left corner to the top right corner.
+
+<br /><img width="211" height="41" alt="image" src="https://github.com/user-attachments/assets/38aa5287-4ee9-447a-bef7-755319c43d29" />  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2.10)
+
+<br /><img width="310" height="41" alt="image" src="https://github.com/user-attachments/assets/672b07fd-60a0-45d2-90db-6c7078f4ae63" />
+
+<br /><img width="408" height="41" alt="image" src="https://github.com/user-attachments/assets/e4f07bd1-6080-4adb-a374-eafa715a570a" />
+
+<br /><img width="501" height="41" alt="image" src="https://github.com/user-attachments/assets/2587fb67-8352-4ca0-9cf3-d75eacd7e7b6" />
+
+<br /><img width="192" height="41" alt="image" src="https://github.com/user-attachments/assets/7896ebe5-fb15-4e3f-931f-15430b62c139" />
+
+<br />
+<br />
+<br />
 
 <br />
 <br />

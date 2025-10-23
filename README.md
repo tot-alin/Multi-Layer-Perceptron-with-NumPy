@@ -59,19 +59,56 @@ Initializing the bias vector, it is a matrix with a single row and has the numbe
 
 Equation 1.4 relates the weighted sum of the input layer to which the bias vector is added. The shape of the SL1 matrix is 100x64, the shape resulting from multiplying the matrix X (100x784) by the matrix wL1 (784x64). For equations 1.6, 1.8 and 1.10, the approach is identical but the matrix X is replaced by the matrix resulting from the activation function in the previous layer, and the weighted matrix w is the matrix related to the respective layer.
 
+<br /><img width="118" height="21" alt="image" src="https://github.com/user-attachments/assets/cfae6d6d-f1f6-41ee-8b52-d64682942bc9" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1.4)
 
+<br /><img width="529" height="68" alt="image" src="https://github.com/user-attachments/assets/d2fa78c6-e2f5-49a0-8f4e-04cd85900a99" />
+<br />matrix form of eucation 1.4
+
+The activation functions expressed in Equations 1.5, 1.7 and 1.9 are the weighted sum matrix for each layer, to which the sigmoid function (in this case, Equation 1.2) is applied for the element in the matrix.
+
+<br /><img width="82" height="22" alt="image" src="https://github.com/user-attachments/assets/bbe24480-dd95-4b97-824e-59e1352b3a6b" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1.5)
+
+<br /><img width="306" height="72" alt="image" src="https://github.com/user-attachments/assets/3180d3a3-b64a-49b3-afc0-e20963e3d78e" />
+
+<br /><img width="130" height="21" alt="image" src="https://github.com/user-attachments/assets/ca8f38a8-482f-4753-baf2-01f29a0d0c8f" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1.6)
+
+<br /><img width="543" height="68" alt="image" src="https://github.com/user-attachments/assets/5b18cb44-d9b0-4198-90f9-ed0e3c7be328" />
+
+<br /><img width="82" height="22" alt="image" src="https://github.com/user-attachments/assets/9f4370c4-71ee-4459-a633-252f6c0029f0" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1.7)
+
+<br /><img width="298" height="72" alt="image" src="https://github.com/user-attachments/assets/cc4d068c-ee83-40ad-bdc3-1fc8a1ea6f02" />
+
+
+<br /><img width="130" height="21" alt="image" src="https://github.com/user-attachments/assets/9b2a7749-21b7-4640-b360-74e71b119d81" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1.8)
+
+<br /><img width="549" height="68" alt="image" src="https://github.com/user-attachments/assets/f68b07ad-d51b-4380-a256-060009fe2bac" />
+
+<br /><img width="82" height="22" alt="image" src="https://github.com/user-attachments/assets/03d302c8-72ee-4517-bd8e-258a0783dd58" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1.9)
+
+<br /><img width="306" height="72" alt="image" src="https://github.com/user-attachments/assets/1bbd91e1-96db-4b44-91dd-8156c835c57d" />
+
+<br /><img width="132" height="21" alt="image" src="https://github.com/user-attachments/assets/0cb74c4b-fdfb-4797-b0bf-ce40bf91123a" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1.10)
+
+<br /><img width="551" height="68" alt="image" src="https://github.com/user-attachments/assets/7797ae75-acdf-4cba-95ea-8867d0ea1d01" />
+
+<br /><img width="83" height="22" alt="image" src="https://github.com/user-attachments/assets/f7f86100-f218-4af8-8097-f4d595c2d651" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1.11)
+
+<br /><img width="307" height="72" alt="image" src="https://github.com/user-attachments/assets/7956e98c-9c92-47c8-b004-ea127ce247ea" />
+
+<br />S Ln – weighted sum matrix of layer Ln ;  w Ln – weight matrix Ln ; X – matrix of input data ; ALn – the matrix resulting from the activation function (sigmoid in this case) for the Ln 
 <br />
 <br />
 
+## Backpropagation
+Backpropagation is the method of training the neural network in order to reduce the difference between the predicted and the actual outcome. As the name suggests it has the reverse direction to Feedforward, resulting in gradients with which the weights (w) are adjusted.
+
+Determining gradients is done using the chain rule, which helps us find the derivative of a compound function.  The case of a function <img width="79" height="20" alt="image" src="https://github.com/user-attachments/assets/707b193d-e490-413e-86b0-f267c4a84082" /> , where g -is the function of x, and f is the function of g, the result is the derivative of y with respect to x is (2.1):
+
+<img width="87" height="39" alt="image" src="https://github.com/user-attachments/assets/8915bc40-779f-418a-a74a-44755fe657fb" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2.1)
+
+According to the principle stated above and considering equation 1.1, we can write the partial derivative equation of the correction gradient <img width="26" height="39" alt="image" src="https://github.com/user-attachments/assets/1a62c8db-f75c-45bd-8320-35677d58ba73" /> for a single-layer linear perceptron, as (2.2).
 
 
-<br />
-<br />
-
-
-
-<br />
-<br />
 
 
 

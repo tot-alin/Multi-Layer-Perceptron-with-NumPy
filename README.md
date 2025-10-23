@@ -113,6 +113,35 @@ E – loss, w – coefficients weights, <img width="61" height="23" alt="image" 
 
 Using the example of equation 2.2 and the chain rule with multiple consecutive functions, we can determine the partial derivative equations for a model with four hidden layers. Based on Figure 2, which represents a sketch of the model's operation, we can deduce the partial derivatives and their order.
 
+<br />fig. 2
+<p align="center">
+<br /><img width="1303" height="451" alt="Screenshot from 2025-10-23 12-36-48" src="https://github.com/user-attachments/assets/3473bc0c-71f9-42b4-9fb6-c71c8435c551" />
+</p>
+
+This gives equations 2.3 which determine the gradients of the weights on the 4 hidden layers.
+
+<img width="450" height="190" alt="Screenshot from 2025-10-23 12-39-40" src="https://github.com/user-attachments/assets/7a66e85c-12c3-44cd-899c-08f0cef8f9a9" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2.3)
+
+E –loss; A Ln – activation function for layer n; S Ln – weighted sum on layer n; w Ln – weight of layer n
+
+Similar to the determination of the gradients of the weights we determine the gradients for the bias, but replacing w L by b L. This is a vector that has the size of the number of perceptrons in the layer.
+
+<img width="912" height="386" alt="Screenshot from 2025-10-23 12-44-25" src="https://github.com/user-attachments/assets/1c028f11-a9a1-4a37-930f-88ad4253d80a" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2.4)
+
+b Ln – bias for layer n
+
+Taking into account that the neural network has a repetitive form with respect to the positioning of the perceptrons composing it, we can generalize the relations for the partial derivatives as follows:
+* For the output layer, <img width="33" height="41" alt="image" src="https://github.com/user-attachments/assets/c69f152b-70ea-4bac-8fd6-43944db7dffb" /> represents the change in loss (E) as a function of the change in the activation function result (AL). In this situation we have chosen the simplest loss function, i.e. the difference between the model output (AL) and the actual output (Y) used during training
+
+<br /><img width="84" height="41" alt="image" src="https://github.com/user-attachments/assets/3fa14ae7-6519-49e4-b348-524c039224a5" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2.5)
+
+* The influence of the result of the activation function (A L = f(SL)) on the weighted sum (S L), is equal to the derivative of the activation function <img width="42" height="23" alt="image" src="https://github.com/user-attachments/assets/bdca3c34-a906-4fe3-9f12-80ad94315088" /> In this case we have chosen the sigmoid function, so the derivative of this function is <img width="156" height="22" alt="image" src="https://github.com/user-attachments/assets/743e1bfa-e1ef-4568-af4c-bda2f5045bca" /> ( taken from the literature)
+
+<img width="282" height="44" alt="image" src="https://github.com/user-attachments/assets/c48c7ae9-5ba6-4bb1-864b-e7f836e04955" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2.6) 
+  
+
+
+
 
 
 

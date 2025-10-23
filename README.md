@@ -108,6 +108,10 @@ Determining gradients is done using the chain rule, which helps us find the deri
 
 According to the principle stated above and considering equation 1.1, we can write the partial derivative equation of the correction gradient <img width="26" height="39" alt="image" src="https://github.com/user-attachments/assets/1a62c8db-f75c-45bd-8320-35677d58ba73" /> for a single-layer linear perceptron, as (2.2).
 
+<img width="199" height="47" alt="image" src="https://github.com/user-attachments/assets/c510a5ea-44cf-4650-a438-78273b8bbdf5" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2.2)
+E – loss, w – coefficients weights, <img width="61" height="23" alt="image" src="https://github.com/user-attachments/assets/6612c2fd-5395-462e-b63d-0975948510b4" /> – weighted sum, X – input values
+
+Using the example of equation 2.2 and the chain rule with multiple consecutive functions, we can determine the partial derivative equations for a model with four hidden layers. Based on Figure 2, which represents a sketch of the model's operation, we can deduce the partial derivatives and their order.
 
 
 

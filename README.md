@@ -218,20 +218,40 @@ As it follows from equations 2.10, the gradients of b L are equal to δ L and th
 <br /><img width="230" height="72" alt="image" src="https://github.com/user-attachments/assets/57388d8c-5f6f-4199-b591-13e8ce842541" />
 
 <br /><img width="237" height="72" alt="image" src="https://github.com/user-attachments/assets/a89bc371-5cda-4cdb-9b55-86b87e1e3b60" />  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2.13)
-
-<br />
-<br />
-<br />
-<br />
-<br />
 <br />
 <br />
 
+## Gradient Descent
+Gradient descent is a method of optimizing a model by finding a local minimum of a differential function. In machine learning, it has the role of correcting the weights used in the neural network. The generalized form as well as the way of working is expressed in equation 3.1
+
+<br /><img width="136" height="21" alt="image" src="https://github.com/user-attachments/assets/d6f43d0c-b8a2-4312-8a5c-f6007841f71e" />
+
+
+<br /><img width="128" height="21" alt="image" src="https://github.com/user-attachments/assets/bd394af6-bd54-4388-87d0-acc8ac756266" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3.1)
+
+<br /><img width="11" height="19" alt="image" src="https://github.com/user-attachments/assets/7b258c5d-c966-48e2-8dbf-1d054812cb4d" /> – learning rate
+
+Equation 2.3 presents the weight and bias optimization approach for each layer
+
+<br /><img width="569" height="41" alt="image" src="https://github.com/user-attachments/assets/24184904-d865-4869-bc71-768af8688cc9" />
+
+<br /><img width="530" height="41" alt="image" src="https://github.com/user-attachments/assets/dfbb90e5-436c-414b-a2a4-c8373058613a" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3.2)
+<br />
+<br />
+
+## Mean Squared Error
+The mean squared error is a method of expressing the errors that a model may have. It is realized according to equation 4.1, being the average of the squares of the difference between the predicted and the actual result.
+
+<img width="140" height="39" alt="image" src="https://github.com/user-attachments/assets/05ce1cb0-1fb9-4219-9780-ab67fc4354eb" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (4.1)
 
 <br />
 <br />
 
-<br />
+## Accuracy metric
+For classification tasks, this method provides a quick information of the model performance in terms of the correctness of the delivered results. The accuracy expresses the ratio of the number of correct results to the total number of results
+
+<img width="297" height="39" alt="image" src="https://github.com/user-attachments/assets/6641ac34-d8c1-4e27-b788-60be140e879f" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (5.1)
+
 <br />
 
 
@@ -242,19 +262,25 @@ As it follows from equations 2.10, the gradients of b L are equal to δ L and th
 <br />
 <br />
 
+## Bibliography:
+https://medium.com/@14prakash/back-propagation-is-very-simple-who-made-it-complicated-97b794c97e5c
 
-<br />
-<br />
+https://mattmazur.com/2015/03/17/a-step-by-step-backpropagation-example/
 
-Bibliography:
-* https://medium.com/@14prakash/back-propagation-is-very-simple-who-made-it-complicated-97b794c97e5c
-* https://mattmazur.com/2015/03/17/a-step-by-step-backpropagation-example/
-* https://machinelearning.tobiashill.se/2018/12/04/part-2-gradient-descent-and-backpropagation/
-* https://www.3blue1brown.com/lessons/backpropagation-calculus
-* http://neuralnetworksanddeeplearning.com/chap2.html
-* https://hmkcode.com/ai/backpropagation-step-by-step/
-* https://sefiks.com/2017/01/21/the-math-behind-backpropagation/#google_vignette
-* https://medium.com/@samuelsena/pengenalan-deep-learning-part-3-backpropagation-algorithm-720be9a5fbb8
-* https://pabloinsente.github.io/the-multilayer-perceptron
-* https://towardsdatascience.com/understanding-backpropagation-abcc509ca9d0/
-* https://www.geeksforgeeks.org/machine-learning/backpropagation-in-neural-network/
+https://machinelearning.tobiashill.se/2018/12/04/part-2-gradient-descent-and-backpropagation/
+
+https://www.3blue1brown.com/lessons/backpropagation-calculus
+
+http://neuralnetworksanddeeplearning.com/chap2.html
+
+https://hmkcode.com/ai/backpropagation-step-by-step/
+
+https://sefiks.com/2017/01/21/the-math-behind-backpropagation/#google_vignette
+
+https://medium.com/@samuelsena/pengenalan-deep-learning-part-3-backpropagation-algorithm-720be9a5fbb8
+
+https://pabloinsente.github.io/the-multilayer-perceptron
+
+https://towardsdatascience.com/understanding-backpropagation-abcc509ca9d0/
+
+https://www.geeksforgeeks.org/machine-learning/backpropagation-in-neural-network/
